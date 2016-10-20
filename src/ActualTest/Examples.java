@@ -165,12 +165,30 @@ public class Examples {
 		 */
 		
 		System.out.println("\nExample 12:");
-		int[][] myComplexArray = {{5,2,1,3},{3,9,8,9},{5,7,12,7}};
-		OUTER_LOOP: for(int[] mySimpleArray : myComplexArray) {
-			INNER_LOOP: for(int q1 = 0; q1 < mySimpleArray.length; i++) {
-				System.out.println(mySimpleArray[i]);
-			}
+//		int[][] myComplexArray = {{5,2,1,3},{3,9,8,9},{5,7,12,7}};
+//		OUTER_LOOP: for(int[] mySimpleArray : myComplexArray) {
+//			INNER_LOOP: for(int q1 = 0; q1 < mySimpleArray.length; i++) {
+//				System.out.println(mySimpleArray[i]);
+//			}
+//		}
+		
+		
+		// Had this on the exam with the question what the output would be.
+		// Also available options: Does not compile / Exception on runtime.
+		String s1 = "Hallo";
+		String s2 = new String("Hallo");
+		if(s1 == s2) {
+			System.out.println("==");
+		}else if(s1.equals(s2)) { 
+			System.out.println(".equals()");
+		}else {
+			System.out.println("Something else..");
 		}
 		
+		/*
+		 * As s2 is created on runtime, == wouldn't return true.
+		 * .equals() (in this case) will return true as it checks if the String is equals.
+		 * Hallo == Hallo so .equals will return true.
+		 */
 	}
 }
